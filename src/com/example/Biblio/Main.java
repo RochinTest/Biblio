@@ -8,9 +8,10 @@ public class Main {
         ReaderReturnedBookReadingRoom producer = new ReaderReturnedBookReadingRoom(bstore);
         ReaderTookBookReadingRoom consumer = new ReaderTookBookReadingRoom(bstore);
 
-        new Thread(producer).start();
+
         new Thread(consumer).start();
         new Thread(homeReader).start();
         new Thread(homeReader1).start();
+        new Thread(producer).start();
     }
 }
